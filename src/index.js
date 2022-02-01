@@ -22,12 +22,12 @@ fetch('https://gist.githubusercontent.com/VincentLeV/a0c326b9cbeabf63b4e5e02aa97
         company: value.company,
         price: value.price,
         lastYearDividend: value.dividendHistory[0].dividend,
-        dividendYield: (value.dividendHistory[0].dividend / value.price * 100).toFixed(1),
-        avgDividendYield: (dividendSum / (value.price * 5) * 100).toFixed(1),
-        weightAvgDividendYield: (weightDividendSum / weights.reduce((result, num) => result + num)).toFixed(1)
+        dividendYield: (value.dividendHistory[0].dividend / value.price * 100),
+        avgDividendYield: (dividendSum / (value.price * 5) * 100),
+        weightAvgDividendYield: (weightDividendSum / weights.reduce((result, num) => result + num))
       };
 
-      console.log(`Share: ${obj.share}\nCompany: ${obj.company}\nPrice: ${obj.price}\nLast year dividend: ${obj.lastYearDividend}\nDividend yield-%: ${obj.dividendYield}\n5-year average dividend yield-%: ${obj.avgDividendYield}\n5-year weighted average dividend yield-%: ${obj.weightAvgDividendYield}`);
+      console.log(`Share: ${obj.share}\nCompany: ${obj.company}\nPrice: ${obj.price}\nLast year dividend: ${obj.lastYearDividend}\nDividend yield-%: ${obj.dividendYield.toFixed(1)}\n5-year average dividend yield-%: ${obj.avgDividendYield.toFixed(1)}\n5-year weighted average dividend yield-%: ${obj.weightAvgDividendYield.toFixed(1)}`);
       console.log("-------------------");
 
     })
