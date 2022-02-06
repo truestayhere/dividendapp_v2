@@ -1,1 +1,1 @@
-# dividendapp_v2
+git assignment in "v2-polina" branch
